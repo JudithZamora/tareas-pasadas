@@ -1,0 +1,1220 @@
+$font-blue: 'Raleway', sans-serif;
+$font-regular: 'Roboto', sans-serif;
+$blue: #2196F3;
+$black: #212121;
+$grey: #757575;
+$white: #ffff;
+$backcolor: #F5F4FA;
+$backgrey: #F5F4FA;
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    body {
+        margin: 0%;
+        padding: 0%;
+        min-width: 320px;
+        box-sizing: border-box;
+
+        .nav {
+            padding: 4%;
+
+            .web {
+                text-decoration: none;
+                font-family: $font-blue;
+                color: $blue;
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: 3%;
+            }
+
+            .btnOpen {
+                float: right;
+            }
+
+            &__link {
+                display: none;
+            }
+
+            &__contact {
+                display: none;
+            }
+        }
+
+        .container-all {
+            position: fixed;
+            opacity: 0;
+            visibility: hidden;
+            width: 100%;
+            top: 0;
+            left: 0;
+
+
+            .popup {
+                height: 100vh;
+                position: relative;
+                background-color: $white;
+                padding-top: 8%;
+                padding-left: 7%;
+
+                &__link {
+                    color: $black;
+                    font-family: $font-regular;
+                    font-size: 48px;
+                    line-height: 150%;
+                    letter-spacing: 3%;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+
+                &__link:hover {
+                    color: $blue;
+                }
+
+                .contacts {
+                    margin-top: 25%;
+
+                    &__span {
+                        font-size: 30px;
+                        font-family: $font-regular;
+                        font-weight: 500;
+                        line-height: 40px;
+                        letter-spacing: 2%;
+                        color: $blue;
+                    }
+
+                    &__span--mail {
+                        font-size: 24px;
+                        font-family: $font-regular;
+                        font-weight: 500;
+                        line-height: 290%;
+                        letter-spacing: 2%;
+                        color: $grey;
+                    }
+                }
+
+                .redes {
+                    padding-top: 15%;
+                    display: inline-flex;
+
+                    &__link {
+                        text-decoration: none;
+                        font-family: $font-regular;
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 22px;
+                        letter-spacing: 2%;
+                        color: $blue;
+                        margin-right: 8px;
+                        margin-left: 8px;
+                    }
+
+
+                }
+
+            }
+
+            .btn-close-popup {
+                text-decoration: none;
+                color: $black;
+                float: right;
+                margin-top: -9%;
+                margin-right: 2%;
+            }
+
+
+        }
+
+        .container-all:target {
+            background: rgb(0, 0, 0, 0.8);
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        .container {
+            text-align: center;
+            max-width: 480px;
+            height: 400px;
+            background-size: cover;
+            background-size: 480px 400px;
+            background-image: url(/IMAGENEST2/Imagen\ del\ título.png);
+
+            &__title {
+                font-size: 26px;
+                line-height: 42px;
+                letter-spacing: 6%;
+                font-family: $font-regular;
+                padding-top: 32%;
+                color: $white;
+            }
+
+            &__button {
+                width: 200px;
+                height: 50px;
+                font-size: 16px;
+                font-family: $font-regular;
+                line-height: 38px;
+                letter-spacing: 6%;
+                color: $white;
+                background-color: $blue;
+                border: none;
+                border-radius: 4px;
+            }
+        }
+
+        .modal-all {
+            position: fixed;
+            opacity: 0;
+            visibility: hidden;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            .popupInput {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                padding: 3%;
+                background-color: $white;
+
+                &__circle {
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    border: 1px solid $blue;
+                    float: right;
+                }
+
+                &__svg {
+                    margin-top: -40%;
+                    margin-left: -40%;
+                    scale: 60%;
+                }
+
+                &__title {
+                    text-align: center;
+                    font-family: $font-regular;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 23px;
+                    letter-spacing: 3%;
+                    padding-top: 5%;
+                }
+
+                label {
+                    width: 80%;
+                    padding-left: 5%;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    font-family: $font-regular;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 14.06px;
+                    letter-spacing: 1%;
+                    color: $grey;
+                }
+
+                .inputs {
+                    padding-top: 5%;
+                    width: 100%;
+                    margin: 0 auto;
+
+                    &__date {
+                        clear: both;
+                        display: table;
+                        width: 80%;
+                        margin: 0 auto;
+                        height: 30px;
+                        border: 1px solid $grey;
+                        border-radius: 4px;
+                        margin-top: 2%;
+                        padding-left: 8%;
+                        margin-bottom: 2%;
+                    }
+
+                    &__date--text {
+                        clear: both;
+                        display: table;
+                        height: 120px;
+                        width: 80%;
+                        margin: 0 auto;
+                        border: 1px solid $grey;
+                        border-radius: 4px;
+                        margin-top: 2%;
+                        padding-left: 8%;
+                    }
+
+                    &__date--text::placeholder {
+                        padding-top: 0x;
+                        left: 16%;
+                    }
+
+                    &__svg {
+                        position: absolute;
+                        left: 16%;
+                        top: 26%;
+                        transform: translateY(-50%);
+                    }
+
+                    &__svg--tel {
+                        position: absolute;
+                        left: 16%;
+                        top: 38%;
+                        transform: translateY(-50%);
+                    }
+
+                    &__svg--mail {
+                        position: absolute;
+                        left: 16%;
+                        top: 49.5%;
+                        transform: translateY(-50%);
+                    }
+
+                    &__check {
+                        width: 100%;
+                        margin-left: 2%;
+                        display: inline-flex;
+                    }
+
+                    &__checkText {
+                        width: 80%;
+                        line-height: 14px;
+                        font-weight: 400;
+                        letter-spacing: 3%;
+                        font-size: 10px;
+                    }
+
+                    &__send {
+                        background-color: $blue;
+                        color: $white;
+                        border: none;
+                        border-radius: 4px;
+                        width: 150px;
+                        height: 40px;
+                        margin-left: 27%;
+                    }
+
+
+                }
+
+            }
+
+            input::placeholder {
+                color: #2196F3;
+            }
+
+        }
+
+
+    }
+
+    .modal-all:target {
+        background: rgb(0, 0, 0, 0.8);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .us {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+
+        &__containerSvg {
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            padding: 7%;
+            border-radius: 4px;
+            background-color: $backcolor;
+        }
+
+        &__title {
+            font-family: $font-regular;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16.41px;
+            letter-spacing: 3%;
+            margin-top: 6%;
+        }
+
+        &__p {
+            font-family: $font-regular;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 3%;
+            margin-top: 3%;
+        }
+
+    }
+
+    .do {
+        display: none;
+
+    }
+
+    .team {
+
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 10%;
+        background-color: $backgrey;
+
+        &__title {
+            padding-top: 15%;
+            font-family: $font-regular;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 33.81px;
+            letter-spacing: 3%;
+            text-align: center;
+        }
+    }
+
+    .containerTeam {
+        width: 100%;
+        display: block;
+
+        &__box {
+            box-shadow: 2px 2px 2px 2px $grey;
+            background-color: $white;
+            margin-bottom: 5%;
+            border-radius: 4px;
+            height: auto;
+        }
+
+        &__img {
+            width: 100%;
+            height: 460px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/IMAGENES/andres.jpg);
+        }
+
+        &__img--carla {
+            width: 100%;
+            height: 460px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/IMAGENES/carla.jpg);
+        }
+
+        &__img--mario {
+            width: 100%;
+            height: 460px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/IMAGENES/mario.jpg);
+        }
+
+        &__img--pablo {
+            width: 100%;
+            height: 460px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/IMAGENES/pablo.jpg);
+        }
+
+        &__text {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: -50%;
+
+        }
+
+        &__name {
+            font-family: $font-regular;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 3%;
+            color: $black;
+        }
+
+        &__job {
+            font-family: $font-regular;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 3%;
+
+            color: $grey;
+        }
+
+        .redSocial {
+            width: 55%;
+            margin: 0 auto;
+            top: -55%;
+            padding-bottom: 10%;
+            display: flex;
+            justify-content: space-around;
+
+            &__circle {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: space-around;
+
+            }
+
+            &__circle:hover {
+                background-color: $blue;
+            }
+
+            &__svg {
+                margin-top: 30%;
+            }
+
+        }
+    }
+
+    .client {
+        text-align: center;
+
+        &__title {
+
+            font-family: $font-regular;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 33.81px;
+            letter-spacing: 3%;
+            text-align: center;
+        }
+
+        .contentClient {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .Client {
+                border: 2px solid $backgrey;
+                border-radius: 4px;
+                margin-top: 3%;
+                margin-bottom: 5%;
+
+                &__svg {
+                    scale: 70%;
+                }
+
+                &__svg:hover {
+                    stroke: $blue;
+                    fill: #2196F3;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        text-align: center;
+        background-color: $black;
+        padding-top: 15%;
+
+        &__web {
+            text-decoration: none;
+            font-family: $font-blue;
+            color: $blue;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 3%;
+        }
+
+        &__p {
+            font-family: $font-regular;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 24px;
+            letter-spacing: 3%;
+            color: $white;
+            margin-bottom: -2%;
+        }
+
+        &__span {
+            margin: 0 auto;
+            clear: both;
+            display: table;
+            color: $grey;
+            font-family: $font-regular;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 24px;
+            letter-spacing: 3%;
+            margin-top: -2%;
+        }
+
+        &__social {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        &__found {
+            font-family: $font-regular;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 3%;
+            color: $white;
+            margin-bottom: 10%;
+        }
+
+        &__icon {
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__circle {
+            display: flex;
+            justify-content: space-around;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &__svg {
+            margin-top: 25%;
+        }
+
+        .form {
+
+            &__email {
+                font-family: $font-regular;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 3%;
+                color: $white;
+                margin-bottom: 10%;
+            }
+
+            &__input {
+                width: 90%;
+                border: 1px solid $grey;
+                background-color: $black;
+                border-radius: 4px;
+                height: 50px;
+                padding-left: 5%;
+                margin-bottom: 5%;
+            }
+
+            &__button {
+                background-color: $blue;
+                border: none;
+                border-radius: 4px;
+                width: 200px;
+                height: 50px;
+                margin-bottom: 10%;
+                font-family: $font-regular;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 3%;
+                color: $white;
+            }
+
+            &__svg {
+                scale: 90%;
+                position: absolute;
+                margin-left: -20%;
+                padding: 3%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        margin: 0%;
+        padding: 0%;
+        min-width: 320px;
+        box-sizing: border-box;
+
+        .nav {
+            padding: 4%;
+
+            .web {
+                text-decoration: none;
+                font-family: $font-blue;
+                color: $blue;
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: 3%;
+            }
+
+            .btnOpen {
+                display: none;
+            }
+
+            &__link {}
+
+            &__contact {}
+        }
+
+        .container-all {
+            display: none;
+
+
+            .popup {
+                display: none;
+
+                &__link {
+                    display: none;
+                }
+
+                &__link:hover {
+                    display: none;
+                }
+
+                .contacts {
+                    display: none;
+
+                    &__span {
+                        display: none;
+                    }
+
+                    &__span--mail {
+                        display: none;
+                    }
+                }
+
+                .redes {
+                    display: none;
+
+                    &__link {
+                        display: none;
+                    }
+
+
+                }
+
+            }
+
+            .btn-close-popup {
+                display: none;
+            }
+
+
+        }
+
+        .container-all:target {
+            display: none;
+        }
+
+
+        .container {
+            text-align: center;
+            max-width: 768px;
+            height: 600px;
+            background-size: cover;
+            background-size: 768px 600px;
+            background-image: url(/IMAGENEST2/Imagen\ del\ título.png);
+
+            &__title {
+                font-size: 42px;
+                line-height: 42px;
+                letter-spacing: 6%;
+                font-family: $font-regular;
+                padding-top: 32%;
+                color: $white;
+            }
+
+            &__button {
+                width: 200px;
+                height: 50px;
+                font-size: 16px;
+                font-family: $font-regular;
+                line-height: 38px;
+                letter-spacing: 6%;
+                color: $white;
+                background-color: $blue;
+                border: none;
+                border-radius: 4px;
+            }
+        }
+
+        .modal-all {
+            position: fixed;
+            opacity: 0;
+            visibility: hidden;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            .popupInput {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                padding: 3%;
+                background-color: $white;
+
+                &__circle {
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    border: 1px solid $blue;
+                    float: right;
+                }
+
+                &__svg {
+                    margin-top: -40%;
+                    margin-left: -40%;
+                    scale: 60%;
+                }
+
+                &__title {
+                    text-align: center;
+                    font-family: $font-regular;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 23px;
+                    letter-spacing: 3%;
+                    padding-top: 5%;
+                }
+
+                label {
+                    width: 80%;
+                    padding-left: 5%;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    font-family: $font-regular;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 14.06px;
+                    letter-spacing: 1%;
+                    color: $grey;
+                }
+
+                .inputs {
+                    padding-top: 5%;
+                    width: 100%;
+                    margin: 0 auto;
+
+                    &__date {
+                        clear: both;
+                        display: table;
+                        width: 80%;
+                        margin: 0 auto;
+                        height: 30px;
+                        border: 1px solid $grey;
+                        border-radius: 4px;
+                        margin-top: 2%;
+                        padding-left: 8%;
+                        margin-bottom: 2%;
+                    }
+
+                    &__date--text {
+                        clear: both;
+                        display: table;
+                        height: 120px;
+                        width: 80%;
+                        margin: 0 auto;
+                        border: 1px solid $grey;
+                        border-radius: 4px;
+                        margin-top: 2%;
+                        padding-left: 8%;
+                    }
+
+                    &__date--text::placeholder {
+                        padding-top: 0x;
+                        left: 16%;
+                    }
+
+                    &__svg {
+                        position: absolute;
+                        left: 16%;
+                        top: 26%;
+                        transform: translateY(-50%);
+                    }
+
+                    &__svg--tel {
+                        position: absolute;
+                        left: 16%;
+                        top: 38%;
+                        transform: translateY(-50%);
+                    }
+
+                    &__svg--mail {
+                        position: absolute;
+                        left: 16%;
+                        top: 49.5%;
+                        transform: translateY(-50%);
+                    }
+
+                    &__check {
+                        width: 100%;
+                        margin-left: 2%;
+                        display: inline-flex;
+                    }
+
+                    &__checkText {
+                        width: 80%;
+                        line-height: 14px;
+                        font-weight: 400;
+                        letter-spacing: 3%;
+                        font-size: 10px;
+                    }
+
+                    &__send {
+                        background-color: $blue;
+                        color: $white;
+                        border: none;
+                        border-radius: 4px;
+                        width: 150px;
+                        height: 40px;
+                        margin-left: 27%;
+                    }
+
+
+                }
+
+            }
+
+            input::placeholder {
+                color: #2196F3;
+            }
+
+        }
+
+
+    }
+
+    .modal-all:target {
+        background: rgb(0, 0, 0, 0.8);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .us {
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 10%;
+
+        &__containerSvg {
+            width: 75%;
+            margin-top: 10%;
+            padding: 7%;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 4px;
+            background-color: $backcolor;
+        }
+
+        &__title {
+            margin-left: 7%;
+            font-family: $font-regular;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16.41px;
+            letter-spacing: 3%;
+            margin-top: 6%;
+        }
+
+        &__p {
+            margin-left: 7%;
+            font-family: $font-regular;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 3%;
+            margin-top: 3%;
+            margin-bottom: 5%;
+        }
+
+    }
+
+    .do {
+        display: none;
+
+    }
+
+    .team {
+
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 10%;
+        background-color: $backgrey;
+
+        &__title {
+            padding-top: 15%;
+            font-family: $font-regular;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 33.81px;
+            letter-spacing: 3%;
+            text-align: center;
+        }
+    }
+
+    .containerTeam {
+        width: 100%;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 50% 50%;
+
+        &__box {
+            width: 90%;
+            margin: 0 auto;
+            box-shadow: 2px 2px 2px 2px $grey;
+            background-color: $white;
+            margin-bottom: 5%;
+            border-radius: 4px;
+
+        }
+
+        &__img {
+            width: 100%;
+            height: 374px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/IMAGENES/andres.jpg);
+        }
+
+        &__img--carla {
+            width: 100%;
+            height: 374px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/IMAGENES/carla.jpg);
+        }
+
+        &__img--mario {
+            width: 100%;
+            height: 374px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/IMAGENES/mario.jpg);
+        }
+
+        &__img--pablo {
+            width: 100%;
+            height: 374px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(/IMAGENES/pablo.jpg);
+        }
+
+        &__text {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: -25%;
+            background-color: #2196F3;
+
+        }
+
+        &__name {
+            font-family: $font-regular;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 3%;
+            color: $black;
+        }
+
+        &__job {
+            font-family: $font-regular;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 3%;
+
+            color: $grey;
+        }
+
+        .redSocial {
+            width: 55%;
+            margin: 0 auto;
+            top: -55%;
+            padding-bottom: 10%;
+            display: flex;
+            justify-content: space-around;
+
+            &__circle {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: space-around;
+
+            }
+
+            &__circle:hover {
+                background-color: $blue;
+            }
+
+            &__svg {
+                margin-top: 30%;
+            }
+
+        }
+    }
+
+    .client {
+        text-align: center;
+
+        &__title {
+
+            font-family: $font-regular;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 33.81px;
+            letter-spacing: 3%;
+            text-align: center;
+        }
+
+        .contentClient {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .Client {
+                border: 2px solid $backgrey;
+                border-radius: 4px;
+                margin-top: 3%;
+                margin-bottom: 5%;
+
+                &__svg {
+                    scale: 70%;
+                }
+
+                &__svg:hover {
+                    stroke: $blue;
+                    fill: #2196F3;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        text-align: center;
+        background-color: $black;
+        padding-top: 15%;
+
+        &__web {
+            text-decoration: none;
+            font-family: $font-blue;
+            color: $blue;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 3%;
+        }
+
+        &__p {
+            font-family: $font-regular;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 24px;
+            letter-spacing: 3%;
+            color: $white;
+            margin-bottom: -2%;
+        }
+
+        &__span {
+            margin: 0 auto;
+            clear: both;
+            display: table;
+            color: $grey;
+            font-family: $font-regular;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 24px;
+            letter-spacing: 3%;
+            margin-top: -2%;
+        }
+
+        &__social {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        &__found {
+            font-family: $font-regular;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 3%;
+            color: $white;
+            margin-bottom: 10%;
+        }
+
+        &__icon {
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__circle {
+            display: flex;
+            justify-content: space-around;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &__svg {
+            margin-top: 25%;
+        }
+
+        .form {
+
+            &__email {
+                font-family: $font-regular;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 3%;
+                color: $white;
+                margin-bottom: 10%;
+            }
+
+            &__input {
+                width: 90%;
+                border: 1px solid $grey;
+                background-color: $black;
+                border-radius: 4px;
+                height: 50px;
+                padding-left: 5%;
+                margin-bottom: 5%;
+            }
+
+            &__button {
+                background-color: $blue;
+                border: none;
+                border-radius: 4px;
+                width: 200px;
+                height: 50px;
+                margin-bottom: 10%;
+                font-family: $font-regular;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 3%;
+                color: $white;
+            }
+
+            &__svg {
+                scale: 90%;
+                position: absolute;
+                margin-left: -20%;
+                padding: 3%;
+            }
+        }
+    }
+}
